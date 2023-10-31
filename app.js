@@ -357,3 +357,13 @@ setTimeout(() => {
     }
   }
 }, 100)
+
+
+const burger = document.querySelector('.burger'),
+      burgerNav = document.querySelector('.burger-nav')
+
+burger.onclick = () => {
+  burgerNav.classList.toggle('burger-open')
+  burger.classList.toggle('clicked')
+  document.querySelector('body').classList.toggle('scroll-off')
+}
