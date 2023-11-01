@@ -14,6 +14,10 @@ a {
   text-decoration: none;
 }
 
+body {
+  background: var(--main-bg-color);
+}
+
 .container {
   width: 100%;
   min-height: 100vh;
@@ -69,13 +73,26 @@ a {
   visibility: hidden;
   height: 0vh;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   font-size: 22px;
   /* transition: height .4s; */
   position: sticky;
   z-index: 5;
-  top: 0;
+  top: 60px;
   background: var(--main-bg-color);
+}
+
+.burger-nav .nav-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.burger-nav .nav-top {
+  margin-top: 40px;
+}
+
+.burger-nav .date {
+  font-size: 15px;
 }
 
 .burger-open {
@@ -85,16 +102,6 @@ a {
 
 .scroll-off {
   overflow: hidden;
-}
-
-.burger-nav .nav-container {
-  display: flex;
-  flex-direction: column;
-  gap: 3vh;
-}
-
-.burger-nav .date {
-  font-size: 15px;
 }
 
 .logo img {
@@ -169,7 +176,6 @@ a {
 }
 
 .info .event * {
-  opacity: 0;
   transition: opacity .4s;
 }
 
@@ -378,6 +384,11 @@ td, th {
   margin-bottom: 0px;
 }
 
+.doubleMedia {
+  flex-direction: row; 
+  align-items: flex-start;
+}
+
 .image iframe {
   margin-top: 20px;
   width: 100%;
@@ -437,13 +448,21 @@ td, th {
   border-radius: 20px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .nav {
     display: none;
   }
 
   .logo {
     justify-content: space-between;
+  }
+
+  .info .event-title {
+    font-size: 40px;
+  }
+
+  .info .invasion .event-title, .info .preparation .event-title {
+    font-size: 33px;
   }
 
   .left-nav {
@@ -463,8 +482,13 @@ td, th {
     width: 100%;
   }
 
+  .quote .portrait {
+    width: 70px;
+    height: 70px;
+  }
+
   .quote .text {
-    padding-left: 85px;
+    padding-left: 60px;
   }
 
   .info .event .theme p {
@@ -490,4 +514,46 @@ td, th {
   td, th {
     padding: 5px;
   }
+
+  .doubleMedia {
+    flex-direction: column;
+  }
 }
+
+.table-container-hide {
+  overflow: hidden;
+  height: 200px;
+  background: url('/src/responsive-device-rotation.png');
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: invert();
+}
+
+/* .alertTextActive {
+  position: absolute;
+  color: white;
+  top: 35%;
+  opacity: 1;
+}
+
+.alertActive {
+  height: 200px;
+  background: rgba(255, 255, 255, 0.284);
+  opacity: .3;
+  filter: blur(20px);
+  margin: 20px;
+}
+
+.alertImageActive {
+  position: absolute;
+  width: 40px;
+  filter: invert();
+  opacity: 1;
+  top: 45%;
+}
+
+.tableActive {
+  border: none;
+  position: relative;
+} */
