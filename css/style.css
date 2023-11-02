@@ -41,12 +41,6 @@ body {
   align-items: center;
   padding: 15px 20px 15px 20px;
   z-index: 10;
-  position: sticky;
-  top: 0;
-  background: rgba(29, 29, 29, 0.784);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border-bottom: .4px solid rgba(255, 255, 255, 0.453);
 }
 
 .burger {
@@ -73,22 +67,33 @@ body {
   visibility: hidden;
   height: 0vh;
   justify-content: center;
-  /* align-items: center; */
-  font-size: 22px;
-  /* transition: height .4s; */
-  position: sticky;
+  font-size: 20px;
+  position: fixed;
+  width: 100%;
   z-index: 5;
-  top: 60px;
+  top: 0px;
   background: var(--main-bg-color);
 }
 
 .burger-nav .nav-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 60px;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.burger-nav .propaganda {
+  margin-top: 20px;
 }
 
 .burger-nav .nav-top {
-  margin-top: 40px;
+  opacity: .6;
+}
+
+.burger-nav .active {
+  opacity: 1;
 }
 
 .burger-nav .date {
@@ -164,7 +169,6 @@ body {
   flex-direction: column;
   gap: 20px;
   padding: 30px;
-  /* display: none; */
 }
 
 .block .info .active {
@@ -455,6 +459,12 @@ td, th {
 
   .logo {
     justify-content: space-between;
+    border-bottom: .4px solid rgba(255, 255, 255, 0.453);
+    position: sticky;
+    top: 0;
+    background: rgba(29, 29, 29, 0.784);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
   }
 
   .info .event-title {
@@ -462,7 +472,7 @@ td, th {
   }
 
   .info .invasion .event-title, .info .preparation .event-title {
-    font-size: 33px;
+    font-size: 30px;
   }
 
   .left-nav {
@@ -483,8 +493,9 @@ td, th {
   }
 
   .quote .portrait {
-    width: 70px;
-    height: 70px;
+    left: 0%;
+    width: 85px;
+    height: 85px;
   }
 
   .quote .text {
@@ -523,37 +534,9 @@ td, th {
 .table-container-hide {
   overflow: hidden;
   height: 200px;
-  background: url('/src/responsive-device-rotation.png');
+  background: url('src/responsive-device-rotation.png');
   background-size: 50px;
   background-repeat: no-repeat;
   background-position: center;
   filter: invert();
 }
-
-/* .alertTextActive {
-  position: absolute;
-  color: white;
-  top: 35%;
-  opacity: 1;
-}
-
-.alertActive {
-  height: 200px;
-  background: rgba(255, 255, 255, 0.284);
-  opacity: .3;
-  filter: blur(20px);
-  margin: 20px;
-}
-
-.alertImageActive {
-  position: absolute;
-  width: 40px;
-  filter: invert();
-  opacity: 1;
-  top: 45%;
-}
-
-.tableActive {
-  border: none;
-  position: relative;
-} */

@@ -118,9 +118,7 @@ burger.onclick = () => {
 
 const tables = document.querySelectorAll('table')
 
-let booleanTime = true
-
-window.addEventListener('orientationchange', () => {
+function orientationFunc() {
   if (screen.orientation.type === 'portrait-primary') {
     document.querySelectorAll('.table-container').forEach(table => {
       table.classList.add('table-container-hide')
@@ -132,9 +130,11 @@ window.addEventListener('orientationchange', () => {
       table.querySelector('table').style.filter = 'none'
     })
   }
-})
+  console.log(screen.orientation.type)
+}
 
-document.querySelectorAll('.table-container').forEach(table => {
-  table.classList.add('table-container-hide')
-  table.querySelector('table').style.filter = 'blur(20px)'
+orientationFunc()
+
+window.addEventListener('orientationchange', () => {
+  orientationFunc()
 })
