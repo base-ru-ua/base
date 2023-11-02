@@ -19,7 +19,13 @@ function setThemesPositions() {
   }
 }
 
-setThemesPositions()
+window.addEventListener('focus', () => {
+  setThemesPositions()
+})
+
+setTimeout(() => {
+  setThemesPositions()
+}, 50)
 
 leftNavEvents.forEach(event => {
   event.querySelector('.title img').onclick = () => {
@@ -115,25 +121,3 @@ burger.onclick = () => {
   burger.classList.toggle('clicked')
   document.querySelector('body').classList.toggle('scroll-off')
 }
-
-// const tables = document.querySelectorAll('table')
-
-// function orientationFunc() {
-//   if (screen.orientation.type === 'portrait-primary') {
-//     document.querySelectorAll('.table-container').forEach(table => {
-//       table.classList.add('table-container-hide')
-//       table.querySelector('table').style.filter = 'blur(20px)'
-//     })
-//   } else {
-//     document.querySelectorAll('.table-container').forEach(table => {
-//       table.classList.remove('table-container-hide')
-//       table.querySelector('table').style.filter = 'none'
-//     })
-//   }
-// }
-
-// orientationFunc()
-
-// window.addEventListener('orientationchange', () => {
-//   orientationFunc()
-// })

@@ -98,6 +98,7 @@ body {
 
 .burger-nav .date {
   font-size: 15px;
+  font-weight: 300;
 }
 
 .burger-open {
@@ -241,7 +242,6 @@ body {
     top: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
 
   .left-nav .events {
@@ -251,6 +251,7 @@ body {
   }
 
   .left-nav .also .title {
+    margin-top: 50px;
     font-weight: 600;
     margin-bottom: 10px;
   }
@@ -338,6 +339,7 @@ body {
 
 /* Tables */
 .table-container {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -457,6 +459,30 @@ td, th {
   border-radius: 20px;
 }
 
+.bottom-nav {
+  display: none;
+  justify-content: space-between;
+  filter: invert();
+  margin: 0 5%;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.bottom-nav img {
+  width: 40px;
+}
+
+.bottom-nav a {
+  display: block;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.bottom-nav a:nth-child(1) img {
+  transform: rotate(180deg);
+}
+
 @media only screen and (orientation: portrait) {
   .table-container {
     overflow: hidden;
@@ -548,6 +574,10 @@ td, th {
 
   .doubleMedia {
     flex-direction: column;
+  }
+
+  .bottom-nav {
+    display: flex;
   }
 }
 
