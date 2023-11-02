@@ -116,25 +116,24 @@ burger.onclick = () => {
   document.querySelector('body').classList.toggle('scroll-off')
 }
 
-const tables = document.querySelectorAll('table')
+// const tables = document.querySelectorAll('table')
 
-function orientationFunc() {
-  if (screen.orientation.type === 'portrait-primary') {
-    document.querySelectorAll('.table-container').forEach(table => {
-      table.classList.add('table-container-hide')
-      table.querySelector('table').style.filter = 'blur(20px)'
-    })
-  } else {
-    document.querySelectorAll('.table-container').forEach(table => {
-      table.classList.remove('table-container-hide')
-      table.querySelector('table').style.filter = 'none'
-    })
-  }
-  console.log(screen.orientation.type)
-}
+// function orientationFunc() {
+//   if (screen.orientation.type === 'portrait-primary') {
+//     document.querySelectorAll('.table-container').forEach(table => {
+//       table.classList.add('table-container-hide')
+//       table.querySelector('table').style.filter = 'blur(20px)'
+//     })
+//   } else {
+//     document.querySelectorAll('.table-container').forEach(table => {
+//       table.classList.remove('table-container-hide')
+//       table.querySelector('table').style.filter = 'none'
+//     })
+//   }
+// }
 
-orientationFunc()
+// orientationFunc()
 
-window.addEventListener('orientationchange', () => {
-  orientationFunc()
-})
+// window.addEventListener('orientationchange', () => {
+//   orientationFunc()
+// })
