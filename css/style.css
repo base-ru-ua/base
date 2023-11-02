@@ -191,6 +191,7 @@ body {
 
 .info .event .theme p {
   font-weight: 300;
+  font-size: 16px;
 }
 
 .info .event .theme {
@@ -336,9 +337,13 @@ body {
   }
 
 /* Tables */
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+
 table {
   width: 90%;
-  /* margin: 0 auto; */
   margin-top: 20px;
   align-self: center;
 }
