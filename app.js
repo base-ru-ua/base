@@ -23,9 +23,9 @@ window.addEventListener('focus', () => {
   setThemesPositions()
 })
 
-setTimeout(() => {
+document.addEventListener('DOMContentLoaded', () => {
   setThemesPositions()
-}, 50)
+})
 
 leftNavEvents.forEach(event => {
   event.querySelector('.title img').onclick = () => {
