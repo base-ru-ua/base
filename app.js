@@ -19,14 +19,6 @@ function setThemesPositions() {
   }
 }
 
-window.addEventListener('focus', () => {
-  setThemesPositions()
-})
-
-document.addEventListener('DOMContentLoaded', () => {
-  setThemesPositions()
-})
-
 leftNavEvents.forEach(event => {
   event.querySelector('.title img').onclick = () => {
     document.querySelectorAll('.timeline .nav-top').forEach((infoEvent, i) => {
@@ -63,6 +55,7 @@ const leftNavThemes = leftNav.querySelectorAll('.event .themes .theme')
 leftNav.querySelectorAll('.event .active .theme').forEach((theme, i) => {
   theme.onclick = () => {
     setTimeout(() => {
+      setThemesPositions()
       scrollTo({ left: 0, top: themePositions[i]})
       clearOpacityLeftNav()
       index = i
