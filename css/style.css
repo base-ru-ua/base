@@ -528,7 +528,7 @@ td, th {
 }
 
 .slider .event {
-  background: url('/src/intro-maidan.jpg');
+  background: url('../src/intro-maidan.jpg');
   background-size: cover;
   background-position: center;
   width: 100%;
