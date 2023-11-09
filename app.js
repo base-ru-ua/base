@@ -19,6 +19,8 @@ function setThemesPositions() {
   }
 }
 
+setThemesPositions()
+
 leftNavEvents.forEach(event => {
   event.querySelector('.title img').onclick = () => {
     document.querySelectorAll('.timeline .nav-top').forEach((infoEvent, i) => {
