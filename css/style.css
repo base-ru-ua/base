@@ -251,8 +251,9 @@ body {
 }
 
 .info .event-date {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 300;
+  opacity: .6;
 }
 
   /* Left Nav */
@@ -384,7 +385,7 @@ table, th, td {
 
 td, th {
   padding: 10px;
-  vertical-align: text-top;
+  /* vertical-align: text-top; */
 }
 
 /* Media */
